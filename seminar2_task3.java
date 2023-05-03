@@ -30,13 +30,15 @@ Sample Output 3:
 NO
 */
 
-
+/*
 public class seminar2_task3 {
+
+public static void main(String[] args) {
     String ip = "255.00.255.255";
     String[] nums = ip.split("."); {
-
-    for(
-    String s:nums){
+        
+    if(nums.length!=4)return;
+    for(String s:nums){
         int num = Integer.parseInt(s);
         if(num < 0 || num > 255) {
             System.out.println("неправильный ip");
@@ -45,4 +47,23 @@ public class seminar2_task3 {
     } 
     System.out.println("Правильный ip");
     }
+}
+}
+*/
+
+public class seminar2_task3 {
+public static void main(String[] args) {
+String ip="300.00.255.255";
+String[] nums=ip.split("\\.");
+
+if(nums.length!=4)return;
+for(String s:nums){
+int num=Integer.parseInt(s);
+if(num<0||num>255){
+System.out.println("неправильный ip");
+return;
+}
+}
+System.out.println("правильный ip");
+}
 }
