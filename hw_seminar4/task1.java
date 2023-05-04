@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-package hw_seminar4;
+//package hw_seminar4;
 
 public class task1 {
     /*
@@ -9,6 +9,7 @@ public class task1 {
      */
 
     public static void main(String[] args) {
+        // создаем список
         LinkedList<String> list = new LinkedList<>();
 
         list.add("Ч");
@@ -26,15 +27,17 @@ public class task1 {
 
         System.out.println("Это первоначальный список: " + list);
 
+        // вызываем метод, возвращающий перевернутый список
         LinkedList<String> reversedList = reverseLinkedList(list);
+        // выводим перевернутый список
         System.out.println("Перевернутый список: " + reversedList);
-
     }
 
     private static LinkedList<String> reverseLinkedList(LinkedList<String> list) {
-        //return null;
+        // создаем новый LinkedList для хранения перевернутого списка 
         LinkedList<String> reversedList = new LinkedList<>();
-
+        // проходим по эл-ам исходного списка в обратном порядке
+        // и добавл их в новый список
         for (int i = list.size() - 1; i >= 0; i--) {
             String element = list.get(i);
             reversedList.add(element);
